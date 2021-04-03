@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+{% load static %}
+{% if s %}
+   <script>
+       alert(' keert'+s);
+   </script>
+{% endif %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Keerthi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href={% static 'new.css' %}>
+    <link rel='stylesheet' type='text/css' media='screen' href={% static 'main.css' %}>
+    <script src='main.js'></script>
+    <style>
+        #bid:hover{
+            background-color:burlywood;
+        
+                
+     }
+     button{
+        background-color:#ff847c;
+        border:#ff847c;
+     }
+   
+    </style>
+</head>
+<body class="bo">
+    <img src={% static "icons8-features-list-24.png" %} id="img_id" style="position :absolute;left:10px;top:5px; width:20px;height:25px;" >
+    <video width="320" height="240" autoplay>
+        <source src="">
+        </video>
+    <div id='sideid' style="position :absolute; visibility:hidden;border-radius:6px;color:black ;left:10px;top:4px;height:100% ;width:250 ;background-color:burlywood;" >
+       <p>Login</p>
+       <p>
+           Premium Access
+       </p>
+       <p>
+           Language
+       </p>
+       <p>
+           Category
+       </p>
+       <p >privacy Policy</p>
+   </div>
+    <div  id='back'>
+       
+          <header >
+            <div id='head'>
+               <h1>filmya </h1>
+            </div>
+        </header>
+
+
+    
+      
+
+        
+      
+
+
+
+
+    <div id=slider>
+
+        <input type="radio" name=slider id="slide1" checked>
+        <input type="radio" name=slider id="slide2" >
+        <input type="radio" name=slider id="slide3" >
+        <input type="radio" name=slider id="slide4" >
+        <input type="radio" name=slider id="slide5" >
+        
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content" style="background:#ff847c;">
+                           <form action ='go' method="GET">
+                           {% csrf_token %}
+                         
+                           
+                            <button type='submit' name="sample" value='{{d}},8'><img width="20%" height="5%"src={% static "deadpool.jpg" %}></button>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content" style="background:#ff847c;">
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                        </div>
+                    </div>  
+                    <div class="slide slide_3">
+                        <div class="slide-content"  style="background:#ff847c;">
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+
+                        </div>
+                    </div>    
+                    <div class="slide slide_4">
+                        <div class="slide-content"  style="background:#ff847c;">
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+
+        </div> 
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+
+        </div> 
+         
+    </div>
+    <nav id="navigation_bar">
+    
+        <div id="corner_id09" style="position:center;visibility:hidden  ;width:300px ;background-color:#ff847c;" >
+           
+           
+        <form action="val" method="POST">
+            {% csrf_token %}
+            <input  class="search_box" name="category" style=" border-radius:10px;visibility: visible;position:center;align-items:center;" type="search">
+         
+           <i></i>
+           <label style="color: blueviolet;" >Category:</label>
+           <select id="selectid"  style=" border-radius:5px;"value="none" name="val2">
+            <option value="none">
+                none
+            </option>
+            <option value="action">
+             Action
+            </option>
+            <option value="GoodFeel">GoodFeel</option>
+            <option value="horror">Horror</option>
+        </select>
+            <button id="bid" style="visibility: visible;border-radius:5px;font:100;" type="submit">search</button>
+    
+        
+        </form>
+        </div>
+         </nav>
+   </div>  
+   
+</body>
+<script src={% static 'js/main.js' %}></script>
+<script src={% static 'js/jquery.js' %}></script>
+<script src={% static 'jquery/jquery-ui.js' %}></script>
+<script src={% static 'ef.js' %}></script>
+<script type="text/javascript" src= {% static "js/jquery.hislide.js" %}></script>
+
+<script src={% static 'jquery/jq.js' %}></script>
+<script>
+    $('.slide').hiSlide();
+</script>
+<script>
+    $(".search_box").mouseover(function(){
+  
+        $("#corner_id09").css('visibility','visible');
+                
+        });
+        $(".search_box").mousedown(function(){
+  
+            $("#corner_id09").css('visibility','hidden');
+                    
+            });
+    $("selectid").options[Object.SelectedIndex].value;
+
+$("#img_id").mouseover(function(){
+    $("#sideid").css('visibility','visible')
+   $("#sideid").animate(
+        {
+           
+            right:'1800px',
+            opacity:'100%',
+            width:'15%',
+        
+        },200,function(){
+
+       
+        $("#back").css('opacity','0')
+        })
+
+});
+$("#sideid").mouseout(function(){
+  
+    $("#sideid").css('visibility','hidden');
+            
+    });
+
+</script>
+
+</html>

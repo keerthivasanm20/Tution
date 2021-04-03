@@ -1,0 +1,112 @@
+{% if er %}
+    <script>
+      alert({er});
+    </script>
+{% endif %}
+{% if er %}
+    <script>
+      alert('not logged in');
+    </script>
+{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>signin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase.js"></script>  
+
+   
+</head>
+<body>
+     <form action="post_create" method="POST">
+        {% csrf_token %}  
+        Film:<input type="text" placeholder="enter the name" name="work" required><br>
+        Link:<input type="text" placeholder="" name="progress" required><br>
+        <br>
+        Category:<input type="text" placeholder="" name="category" required><br>
+        <br>
+     Document:<input type="file" value="upload" id="files"><br>
+        <input type="hidden" name="url" value="empty" id="url">
+        <button type="button" id="but_id" onclick="uploadimage()">upload</button>
+
+        <button type="submit" placeholder="SignUp">post_create</button>
+
+    </form>
+      
+         
+    <form action="logout" method="POST">
+        {% csrf_token %}   
+        <button type="submit" placeholder="SignUp">Logout</button>
+    </form>
+</body>
+
+
+ 
+
+    
+      
+  
+  
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      "apiKey": "AIzaSyC6pGJe27mjmGlPyW1qzFfVyaX1A1_Cqxs",
+      "authDomain": "filmya.firebaseapp.com",
+      "databaseURL" : "https://filmya.firebaseio.com",
+      "projectId": "filmya",
+      "storageBucket": "filmya.appspot.com",
+      "messagingSenderId": "1056629779288",
+      "appId": "1:1056629779288:web:8a3e4ee71726afa7f0932d",
+      "measurementId": "G-PV6SF05HS7"
+  
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+   
+  
+  </script>
+  <script> 
+ function uploadimage(){
+   var storage = firebase.storage();
+   var file =document.getElementById("files").files[0];
+   //filebut.addEventListener('change',function(e){
+   //var  file= e.target.files[0];
+   var storageRef = storage.ref('sample/'+file.name);
+   var thisref =storageRef.put(file);
+   thisref.on('state_changed',
+   function progress(snapshot){
+       console.log('action in progress');
+
+   },
+   function error(err){
+   
+   },
+   function() {
+    // Handle successful uploads on complete
+    // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+    thisref.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+      console.log('File available at', downloadURL);
+      document.getElementById("url").value=downloadURL;
+      alert('completed successfully');
+
+    });
+     //  var downloadURL=thisref.snapshot.downloadURL();
+       //document.getElementById("url").value=downloadURL;
+
+       //console.log('completed successfully ,thus URl:'+ downloadURL);
+       
+})
+  }
+
+  
+
+
+
+
+
+</script>
+</html>

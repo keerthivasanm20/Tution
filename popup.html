@@ -1,0 +1,43 @@
+{% if mg %}
+    <script>
+        alert('not created');
+    </script>
+{% endif %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Welcome</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase.js"></script>  
+</head>
+<body>
+    <div class="link-container">
+  
+    <form action="post_create" method="POST">
+        {% csrf_token %}
+        Email:<input type="email" placeholder="enter the email id" name="email"><br>
+
+        pass:<input type="passwordl" placeholder="enter the password" name="password"><br>
+        <button type="submit" placeholder="Login">Login</button>
+
+    </form>
+    
+    <form action="signup" method="POST">
+        {% csrf_token %}
+        Name:<input type="text" placeholder="enter the name" name="name"><br>
+        Email:<input type="email" placeholder="enter the email id" name="email"><br>
+
+        pass:<input type="passwordl" placeholder="enter the password" name="pass"><br>
+        <button type="submit" placeholder="SignUp">SignUp</button>
+    
+</div>
+
+</body>
+
+</html>

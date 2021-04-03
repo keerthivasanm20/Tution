@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+    <script src='main.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase.js"></script>  
+</head>
+<body>
+   
+    <h1> Welcome to the first in firebase</h1><br>
+    <form action="create">
+        {% csrf_token %}  
+        <button type="submit">Create Report</button><br>
+    </form>
+    <form action="check" method="POST">
+        {% csrf_token %}  
+        <button type="submit">Check Report</button><br>
+    </form>
+    <form action="logout">
+        {% csrf_token %}  
+    <button type="submit" placeholder="Logout">Logout</button><br>
+</form>
+</body>
+</html>

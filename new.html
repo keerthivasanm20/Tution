@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href={% static 'style.css' %}>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id='slider'>
+        <input type="radio" name=slider id="slide1" checked>
+        <input type="radio" name=slider id="slide2" >
+        <input type="radio" name=slider id="slide3" >
+        
+    
+        <div id="slides">
+            
+            <div id="overflow">
+                        
+              
+                <div class="inner">
+                    
+                    div class="slide_slide_">
+                        <div class="slide-content">
+                    
+                   
+                        </div>
+                    </div>
+                    <div class="slide_slide">
+                        <div class="slide-content">
+                            <img class="slider_image" style=" height:320px;width:200px;padding-left:10px;"src={% static "thor.jpg" %}>
+                            <img class="slider_image" style="  height:320px;width:200px;padding-left:10px;"src={% static "extraction.jpg" %}>
+                            <img class="slider_image" style="  height:320px;width:200px;padding-left:10px;"src={% static "captainmarvel.jpg" %}>
+                            <img class="slider_image" style="  height:320px;width:200px;padding-left:10px;" src={% static "war.jpg" %}>
+                            <img class="slider_image" style=" height:320px;width:200px;padding-left:10px;"  src={% static "extraction.jpg" %}>
+                            <img class="slider_image" style="  height:320px;width:200px;padding-left:10px;" src={% static "captainmarvel.jpg" %}>
+                        </div>
+                    </div>  
+                    <div class="slide_slide">
+                        <div class="slide-content">
+                            
+                            <img class="slider_image"  src={% static "thor.jpg" %}>
+                           
+                            <img class="slider_image" src={% static "war.jpg" %}>
+                        </div>
+                    </div>    
+                    <div class="slide_slide_">
+                        <div class="slide-content">
+                            <img class="slider_image"  src={% static "thor.jpg" %}>
+                            <img class="slider_image"  src={% static "extraction.jpg" %}>
+                            <img class="slider_image"  src={% static "captainmarvel.jpg" %}>
+                            <img class="slider_image" src={% static "war.jpg" %}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+         
+
+        </div> 
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+          
+
+        </div> 
+        </div>   
+</body>
+</html>

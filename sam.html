@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'  media='screen' href={% static 'main.css' %}>
+   
+</head>
+<body class="bo">
+    <div  id='back'>
+       
+          <header >
+            <div id='head'>
+               <h1>Filmya </h1>
+            </div>
+            </header>
+<div class="container" style=" width:100%;margin: 40;padding:40;">
+    <span id="slider_image_1"></span>
+    <span id="slider_image_2"></span>
+    <span id="slider_image_3"></span>
+    <span id="slider_image_4"></span>
+    <span id="slider_image_5"></span>
+    <span id="slider_image_6"></span>
+    <span id="slider_image_7"></span>
+    <span id="slider_image_8"></span>
+    <span id="slider_image_9"></span>
+    <span id="slider_image_10"></span>
+    <span id="slider_image_11"></span>
+
+    <div class="image_container"> 
+                    <img class="slider_image" style="width: 8%;height:40%;" src={% static "thor.jpg" %}>
+                    <img class="slider_image" style="width: 8%;height:40%;" src={% static "extraction.jpg" %}>
+                    <img class="slider_image" style="width: 8%;height:40%;" src={% static "captainmarvel.jpg" %}>
+                    <img class="slider_image" style="width: 8%;height:40%;"src={% static "war.jpg" %}>
+                    <img class="slider_image" style="width: 8%;height:40%;"src={% static "downloadd.jpg" %}> 
+                    <img class="slider_image" style="width: 8%;height:40%;" src={% static "imagest.jpg" %}>  
+                    <img class="slider_image"style="width: 8%;height:40%;"src={% static "vathan.jpg" %}>
+                    <img class="slider_image"style="width: 8%;height:40%;"src={% static "maha.jpg" %}>
+                    <img class="slider_image"style="width: 8%;height:40%;"src={% static "downloasd.jpg" %}>
+                    <img class="slider_image"style="width: 8%;height:40%;"src={% static "downloadkd.jpg" %}>
+                    <img class="slider_image"style="width: 8%;height:40%;"src={% static "war.jpg" %}>
+                </div>
+     <div class="button_container">
+     <a href="#slider_image_1 " class="slider_button"></a>
+     <a href="#slider_image_2 " class="slider_button"></a> 
+     <a href="#slider_image_3 " class="slider_button"></a>
+     <a href="#slider_image_4 " class="slider_button"></a>
+     <a href="#slider_image_5 " class="slider_button"></a>
+     <a href="#slider_image_6 " class="slider_button"></a>
+     <a href="#slider_image_7 " class="slider_button"></a>
+     <a href="#slider_image_8 " class="slider_button"></a>
+     <a href="#slider_image_9 " class="slider_button"></a>
+     <a href="#slider_image_10 " class="slider_button"></a>
+     <a href="#slider_image_11 " class="slider_button"></a>
+     
+
+ 
+         
+      </div>
+</div>
+   <nav id="navigation_bar">
+    
+    <div id="corner_id09" style="position:center;visibility:hidden  ;width:300px ;background-color:#ff847c;" >
+       
+       <input  class="search_box" name="val" style="visibility: visible;position:center;align-items:center;" type="search">
+     
+       <i></i>
+       <label style="color: blueviolet;" >Category:</label>
+    <form action="val" method="POST">
+        {% csrf_token %}
+       <select id="selectid" name="=val2">
+        <option value="action">
+         Action
+        </option>
+        <option value="GoodFeel">GoodFeel</option>
+        <option value="horror">Horror</option>
+    </select>
+        <button type="submit">search</button>
+
+    
+</form>
+    </div>
+     </nav>
+    
+
+    <article>
+
+    </article>
+       
+</div>
+</body>
+<script src={% static 'js/main.js' %}></script>
+<script src={% static 'js/jquery.js' %}></script>
+<script src={% static 'jquery/jquery-ui.js' %}></script>
+
+<script src={% static 'jquery/jq.js' %}></script>
+<script>
+    $(".search_box").mouseover(function(){
+  
+        $("#corner_id09").css('visibility','visible');
+                
+        });
+        $(".search_box").mousedown(function(){
+  
+            $("#corner_id09").css('visibility','hidden');
+                    
+            });
+    $("selectid").options[Object.SelectedIndex].value;
+</script>
+
+</html>

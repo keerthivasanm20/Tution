@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>hey</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href={% static 'new.css' %}>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id=slider>
+
+        <input type="radio" name=slider id="slide1" checked>
+        <input type="radio" name=slider id="slide2" >
+        <input type="radio" name=slider id="slide3" >
+        <input type="radio" name=slider id="slide4" >
+        <input type="radio" name=slider id="slide5" >
+        
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                            <img width="20%" height="5%"src={% static "deadpool.jpg" %}>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                            <img width="20%" height="5%"src={% static "captainmarvel.jpg" %}>
+                        </div>
+                    </div>  
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+                            <img width="20%" height="5%"src={% static "war.jpg" %}>
+
+                        </div>
+                    </div>    
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                            <img width="20%" height="5%"src={% static "thor.jpg" %}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+
+        </div> 
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+
+        </div> 
+         
+    </div>
+</body>
+</html>
